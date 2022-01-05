@@ -1,13 +1,13 @@
 pipeline {
-  agent {kubernetes { image 'python:3.7.2' }}
+  agent any
   stages {
     stage('unit') {
         steps{
-            withPythonEnv('python3') {
-                sh 'python --version'
-                sh 'ls'
-                sh 'pwd'
-            }
+//             withPythonEnv('python3') {
+//                 sh 'python --version'
+//                 sh 'ls'
+//                 sh 'pwd'
+//             }
         }
     }
   }
