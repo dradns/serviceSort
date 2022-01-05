@@ -1,13 +1,18 @@
 pipeline {
-  agent any
+  agent {
+        kubernetes {
+            defaultContainer 'jnlp'
+            yamlFile 'agentpod.yaml'
+        }
+    }
   stages {
     stage('unit') {
         steps{
-//             withPythonEnv('python3') {
-//                 sh 'python --version'
+            container('python3'){
+                sh 'python --version'
                 sh 'ls'
                 sh 'pwd'
-//             }
+            }
         }
     }
   }
