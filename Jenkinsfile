@@ -5,7 +5,7 @@ pipeline {
         steps{
 //             withPythonEnv('python3') {
 //                 sh 'python --version'
-//                 sh 'ls'
+                sh 'ls'
 //                 sh 'pwd'
 //             }
         }
