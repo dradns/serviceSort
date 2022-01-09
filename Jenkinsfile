@@ -22,7 +22,7 @@ pipeline {
                 withPythonEnv('python3'){
                     sh 'pwd'
                     sh 'cd app'
-                    sh 'pytest --junitxml results.xml'
+                    sh 'pytest --junitxml results.xml || true'
                     junit "results.xml"
                 }
             }
