@@ -7,4 +7,4 @@ client = TestClient(app)
 def test_sort_array():
     response = client.post('/sort',data = '{"myKey": [9,7,4,1]}')
     assert response.status_code == 200
-    assert response.json().get('myKey',[]) == [11,4,7,9]
+    assert response.json().get('myKey',[]) == [1,4,7,9]
